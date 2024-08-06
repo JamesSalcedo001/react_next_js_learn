@@ -269,6 +269,32 @@ ex:
         const [count, setCount] = useState(0);
     }
 
+    notes: you get two things from useState: the current state (count), and the function that lets you update it (setCount). you can give them any names, but the convention is to write [something, setSomething].
+
+    the first time the button is displayed, count will be 0 because you passed 0 to useState(). when you want to change state, call setCount() and pass the new value to it. clicking this button will increment the counter:
+
+    ex:
+
+        function MyButton() {
+            const [count, setCount] = useState(0);
+
+            function handleClick() {
+                setCount(count + 1)
+            }
+
+            return (
+                <button onClick={handleClick}>
+                Clicked {count} times
+                </button>
+            )
+        }
+
+
+        note: React will call your component function again, this time count will be 1, then 2, etc.
+
+        note: if you render the same component multiple times, each will get it's own state. click each button separately with this:
+
+        
 
 
 */
