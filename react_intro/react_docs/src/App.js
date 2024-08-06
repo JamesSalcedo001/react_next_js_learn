@@ -85,5 +85,14 @@ ex:
         </h1>
     )
 
+    you can also escape into JS from JSX attributes, but you have to use curly braces instead of quotes. EX: className="avatar" passes the "avatar" string as the CSS class, but src={user.imageUrl} reads the JavaScript user.imageUrl variable value, and then passes that value as the src attribute
+
+
+    return (
+        <img 
+            className="avatar"
+            src={user.imageUrl}
+        />
+    );
 
 */
