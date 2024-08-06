@@ -43,7 +43,7 @@ ex:
     // note: The export default keywords specify the main component in the file.
 
 
-    ** writing markup with JSX
+** writing markup with JSX
 
     this markup syntax is called JSX. It is optional, but most React projects use JSX for convenience.
     
@@ -62,7 +62,7 @@ ex:
         if you have to port a lot of HTML to JSX, you can use an online coverter
 
 
-    ** Adding styles
+** Adding styles
 
     React specify a CSS class with className. works the same way as the HTML class attribute
     
@@ -80,7 +80,7 @@ ex:
     notes: React does not prescribe how to add CSS files. In simplest case, you'll add <link> tga to HTML. If using a build tool or framework, one must consult documentation to learn how to add CSS file to project.
 
 
-   ** Displaying data
+** Displaying data
 
     JSX lets you put markup into JS. Curly braces let you escape back into JS so that you can embed some variable from your code and display it to the user. for example this displays user.name:
 
@@ -134,7 +134,7 @@ ex:
         in the example, style={{}} is a regular object inside the style={ } JSX curly braces. you can use the style attribute when your styles depend on JS variables
 
 
-        ** conditional rendering
+** conditional rendering
 
 
         use same JS techniques for conditional rendering in React, for example, if statement to conditionally include JSX
@@ -179,7 +179,7 @@ ex:
 
             note: all of these can also be used to conditionally specify attributes as well
 
-           ** rendering lists
+** rendering lists
            
            to render lists of components, you relay on JS features like the for loop and array map() function
 
@@ -231,5 +231,29 @@ ex:
                         <ul>{listItems}</ul>
                     )
                 }
+
+
+** responding to events
+
+
+you can use event handler functions inside your components
+
+ex:
+
+    function MyButton() {
+        function handleClick() {
+            alert("You clicked me!");
+        }
+
+        return (
+            <button onClick={handleClick}>
+                Click Me
+            </button>
+        );
+    }
+
+    note: notice how onClick={handleClick} has not parentheses at the end. do not call the event handler function; you only need to pass it down. React will call your event handler when the user clicks the button
+
+
 
 */
