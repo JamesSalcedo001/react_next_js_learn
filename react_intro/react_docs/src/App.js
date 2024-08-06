@@ -57,4 +57,22 @@ ex:
         if you have to port a lot of HTML to JSX, you can use an online coverter
 
 
+    // Adding styles
+
+    React specify a CSS class with className. works the same way as the HTML class attribute
+    
+    <img className="avatar" />
+
+
+    then write the CSS rules for it in a separate CSS file:
+
+    // styles.css
+
+    .avatar {
+        border-radius: 50%;
+    }
+
+    notes: React does not prescribe how to add CSS files. In simplest case, you'll add <link> tga to HTML. If using a build tool or framework, one must consult documentation to learn how to add CSS file to project.
+
+
 */
