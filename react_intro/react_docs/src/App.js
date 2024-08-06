@@ -255,5 +255,20 @@ ex:
     note: notice how onClick={handleClick} has not parentheses at the end. do not call the event handler function; you only need to pass it down. React will call your event handler when the user clicks the button
 
 
+** updating the screen
+
+    note: you'll often want your component to remember some info and display it. ex: maybe you want to count the number of times a button is clicked. to do this, add state to your component. 
+
+    first import useState from React:
+
+    ex: import { useState } from "react";
+
+    now you can declare a state variable inside your component:
+
+    ex: function MyButton() {
+        const [count, setCount] = useState(0);
+    }
+
+
 
 */
