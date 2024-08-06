@@ -75,4 +75,15 @@ ex:
     notes: React does not prescribe how to add CSS files. In simplest case, you'll add <link> tga to HTML. If using a build tool or framework, one must consult documentation to learn how to add CSS file to project.
 
 
+    Displaying data
+
+    JSX lets you put markup into JS. Curly braces let you escape back into JS so that you can embed some variable from your code and display it to the user. for example this displays user.name:
+
+    return (
+        <h1>
+            {user.name}
+        </h1>
+    )
+
+
 */
