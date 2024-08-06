@@ -179,6 +179,30 @@ ex:
 
             note: all of these can also be used to conditionally specify attributes as well
 
-            
+           ** rendering lists
+           
+           to render lists of components, you relay on JS features like the for loop and array map() function
+
+           ex: you have an array of products
+
+                const products = [
+                    { title: "cabbage", id: 1},
+                     { title: "garlic", id: 2},
+                      { title: "apple", id: 3},
+                ];
+
+            note: inside your component, use map function to transform array of products into an array of <li> items:
+
+            ex:
+
+                const listItems = products.map(product => 
+                    <li key={product.id}>
+                        {product.title}
+                    </li>
+                )
+
+                return (
+                    <ul>{listItems}</ul>
+                )
 
 */
