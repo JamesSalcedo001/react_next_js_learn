@@ -4,9 +4,14 @@ export default function Square() {
 
 
 
-// Creating and nesting components
 
-/* React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. a component can be as small as a button, or as large as an entire page. React components: JavaScript functions that return markup:
+/* 
+
+** Creating and nesting components
+
+
+
+React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. a component can be as small as a button, or as large as an entire page. React components: JavaScript functions that return markup:
 
 
 ex:
@@ -38,7 +43,7 @@ ex:
     // note: The export default keywords specify the main component in the file.
 
 
-    // writing markup with JSX
+    ** writing markup with JSX
 
     this markup syntax is called JSX. It is optional, but most React projects use JSX for convenience.
     
@@ -57,7 +62,7 @@ ex:
         if you have to port a lot of HTML to JSX, you can use an online coverter
 
 
-    // Adding styles
+    ** Adding styles
 
     React specify a CSS class with className. works the same way as the HTML class attribute
     
@@ -75,7 +80,7 @@ ex:
     notes: React does not prescribe how to add CSS files. In simplest case, you'll add <link> tga to HTML. If using a build tool or framework, one must consult documentation to learn how to add CSS file to project.
 
 
-    Displaying data
+   ** Displaying data
 
     JSX lets you put markup into JS. Curly braces let you escape back into JS so that you can embed some variable from your code and display it to the user. for example this displays user.name:
 
@@ -127,5 +132,53 @@ ex:
 
 
         in the example, style={{}} is a regular object inside the style={ } JSX curly braces. you can use the style attribute when your styles depend on JS variables
+
+
+        ** conditional rendering
+
+
+        use same JS techniques for conditional rendering in React, for example, if statement to conditionally include JSX
+
+
+        ex: 
+
+            let content;
+            if (isLoggedIn) {
+                content = <AdminPanel/>;
+            } else {
+                content = <LoginForm />; 
+            }
+
+            return (
+                <div>
+                    {content}
+                </div>
+            );
+
+
+            note: one can also use the ternary operator but inside the curly braces:
+
+            ex:
+
+                <div>
+                    {isLoggedIn ? (
+                        <AdminPanel />
+                    ) : (
+                        <LoginForm /> 
+                    )}
+                </div>
+
+            note: if the else branch is not necessary, one can use the logical && syntax:
+
+            ex:
+
+                <div>
+                    {isLoggedIn && <AdminPanel />}
+                </div>
+
+
+            note: all of these can also be used to conditionally specify attributes as well
+
+            
 
 */
