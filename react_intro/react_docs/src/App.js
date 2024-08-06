@@ -40,6 +40,21 @@ ex:
 
     // writing markup with JSX
 
+    this markup syntax is called JSX. It is optional, but most React projects use JSX for convenience.
+    
+    JSX is stricter than HTML. You have to close tags like <br />. component also cant return multiple JSX tags. you have to wrap them in shared parent, like a <div></div> or <></> wrapper.
+
+    ex: 
+        function AboutPage() {
+            return (
+                <>
+                    <h1>About</h1>
+                    <p>Hello there. <br />How do you do?</p>
+                </>
+            );
+        }
+
+        if you have to port a lot of HTML to JSX, you can use an online coverter
 
 
 */
