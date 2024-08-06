@@ -205,4 +205,31 @@ ex:
                     <ul>{listItems}</ul>
                 )
 
+            note: notice <li> has a key attribute. for each item in a list, you should pass a string or number that uniquely identifies that item among its siblings. usually a key should be coming from your data, such as a database id. react uses your keys to know what happened if you later insert delete or reorder the items.
+
+
+            ex:
+                const products = [
+                    { title: "cabbage", isFruit: false, id: 1 },
+                    { title: "garlic", isFruit: false, id: 2 },
+                    { title: "apple", isFruit: true, id: 3 },
+                ];
+
+                export default function ShoppingList() {
+                    const listItems = products.map(product => 
+                        <li
+                            key={product.id}
+                            style={{
+                                color: product.isFruit ? "magenta" : "darkgreen"
+                            }}
+                        >
+                        {product.title}
+                        </li>    
+                    );
+
+                    return (
+                        <ul>{listItems}</ul>
+                    )
+                }
+
 */
