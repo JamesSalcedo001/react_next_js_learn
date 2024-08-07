@@ -111,6 +111,9 @@ react is the core library
 react dom provides dom specific methods that enable you to use React with the DOM
 
 
+React is a library that contains reusable snippets of code that perform tasks on your behalf
+
+
 
 
 
