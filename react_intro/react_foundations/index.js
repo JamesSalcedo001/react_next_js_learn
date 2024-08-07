@@ -115,6 +115,38 @@ React is a library that contains reusable snippets of code that perform tasks on
 
 
 
+** React core concepts
+
+3 core concepts of React 
+
+Components
+
+State
+
+Props
+
+
+
+
+** Components
+
+UI can be broken down into smaller building blocks called components
+
+components allow you to build self contained reusable snippets of code. think of them as lego bricks, you can take these bricks and combine them together to form larger structures. if you need to update UI, simply update specific component or brick
+
+
+
+modularity allows code to be more maintainable as it grows bcause you can add update delete components without touching rest of app
+
+nice thing about components is that they are just JS. 
+
+creating components
+
+in react components are functions inside script tag, create new funcion called header:
+
+
+
+
 
 
 
