@@ -89,7 +89,17 @@ this is because the HTML represents the initial page content, whereas the DOM re
 updating the DOM with JS is powerful but verbose. with this approach, devs spend a lot of time writing instructions to tell the computer how it should do things. it would be pretty nice to describe what you want to show and let the computer figure out how to update the DOM.
 
 
+** imperative vs declarative programming
 
+the JS code is a good example of imperative programming. you're writing the steps for how the UI should be updated. but when it comes to building UI, a declarative approach is often preferred because it can speed up the dev process. instead of having to write the DOM methods, it would be helpful if devs were able to declare what they want to show
+
+imperative programming is like giving the chef step by step instructions on how to make a pizza. 
+
+declarative programming is like ordering a pizza without being concerned about the steps it takes to make the pizza.
+
+React is a popular declarative library you can use to build UI
+
+As a dev, you can tell Rect what you want to happen to the UI and React will figure out the steps of how to update the dom on your behalf.
 
 
 
