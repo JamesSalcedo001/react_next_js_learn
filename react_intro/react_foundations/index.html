@@ -3,11 +3,14 @@
         <div id="app"></div>
         <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-        <script type="text/javascript">
+        <!-- babel script -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- change script type to jsx to inform babel what code to transform -->
+        <!-- <script type="text/javascript"> -->
+            <script type="text/jsx">
             const app = document.getElementById('app');
             const root = ReactDOM.createRoot(app);
             root.render(<h1>Develop. Preview. Ship</h1>);
-            // this doesn't work because this is JSX, which is not valid JS
         </script>
     </body>
 </html>
@@ -56,8 +59,14 @@ instead of directly manipulating the DOM with plain JS, remove DOM methods, and 
 
 
 
+** what is JSX? 
+
+JSX is a syntax extension for JS that allows you to describe the UI in a familiar HTMLLike syntax. JSX is very similar to JS + HTML apart from 3 JSX rules
 
 
+but browsers dont understand JSX out the box so one needs a JS compiler such as Babel, to transform JSX code into regular JS.
+
+add babel to project
 
 
 -->
