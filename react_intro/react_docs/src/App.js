@@ -407,4 +407,28 @@ ex: first move the state up from MyButton into MyApp:
                 )
             }
 
+
+        note: when button is clicked, onClick handler fires. each button's onClick prop was set to the handleClick function inside MyApp, so the code inside of it runs. that code calls setCount(count + 1), incrementing the count state variable. the new count value is passed as a prop to each button, so they all show the new value. this is called lifting state up. by moving state up, you've shared it between components.
+
+
+        ex:
+
+            import { useState } from "react";
+
+            export default function MyApp() {
+                const [count, setCount] = useState(0);
+
+                function handleClick() {
+                    setCount(count + 1);
+                }
+
+                return (
+                    <div>
+                        <h1>Counters that update together</h1>
+                        <MyButton count={count} onClick={handleClick}/>
+                        <MyButton count={count} onClick={handleClick}/>
+                    </div>
+                );
+            }
+
 */
