@@ -102,6 +102,15 @@ React is a popular declarative library you can use to build UI
 As a dev, you can tell Rect what you want to happen to the UI and React will figure out the steps of how to update the dom on your behalf.
 
 
+** using react
+
+load two react scripts from an external site called unpkg.com
+
+react is the core library
+
+react dom provides dom specific methods that enable you to use React with the DOM
+
+
 
 
 

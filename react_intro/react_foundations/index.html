@@ -1,6 +1,22 @@
 <html>
     <body>
         <div id="app"></div>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script type="text/javascript">
+            const app = document.getElementById('app');
+            const root = ReactDOM.createRoot(app);
+            root.render(<h1>Develop. Preview. Ship</h1>);
+            // this doesn't work because this is JSX, which is not valid JS
+        </script>
+    </body>
+</html>
+
+
+<!-- 
+<html>
+    <body>
+        <div id="app"></div>
         <script type="text/javascript">
             // select div elem with 'app' id
             const app = document.getElementById('app');
@@ -21,6 +37,11 @@
     </body>
 </html>
 
+JS way 
+
+
+-->
+
 
 <!-- use DOM method getElementByID to select the div elem by its id 
  
@@ -29,7 +50,7 @@ use DOM methods to create a new h1 elem
 
 
 
-
+instead of directly manipulating the DOM with plain JS, remove DOM methods, and add ReactDOM.createRoot() method to target a specific dom element and create a root to display your React components in. then add the root.render() method to render your React code to the DOM this will tell React to render our h1 title inside our #app elem
 
 
 
