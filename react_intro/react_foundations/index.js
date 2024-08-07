@@ -40,7 +40,15 @@ part of react's success is that it is relatively unopinionated about the other a
 it also means there is some work put into building things from the ground up including configuring tools and reinventing solutions for common app reqs
 
 
+** what is Next.js?
 
+NExt.js is a react framework that gives building blocks to create web apps.
+
+by framework, we mean next.js handles the tooling and config needed for React, and provides additional structure, features, and optimizations for your app.
+
+you can use React to build your UI and then incrementally adopt NExt.js features to solve common app requirements such as routing, data fetching, and caching, all while improving the dev and end user exp.
+
+you can use React and Next.js to build fully interactive, highly dynamic, and performant web apps
 
 
 
