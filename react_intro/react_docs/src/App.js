@@ -294,7 +294,32 @@ ex:
 
         note: if you render the same component multiple times, each will get it's own state. click each button separately with this:
 
-        
+       ex:
+            import { useState } from "react";
+            
+            export default funcction MyApp() {
+                return (
+                    <div>
+                        <h1>Counter that update separately</h1>
+                        <MyButton />
+                        <MyButton />
+                    </div>
+                );
+            }
 
 
+
+            function MyButton() {
+                const [count, setCount] = useState(0);
+
+                function handleClick() {
+                    setCount(count + 1);
+                }
+
+                return (
+                    <button onClick={handleClick}>
+                    Clicked {count} times
+                    </button>
+                )
+            }
 */
