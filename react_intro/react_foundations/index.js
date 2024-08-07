@@ -80,6 +80,19 @@ start with creating an html file
 
 
 
+** HTML vs DOM
+
+if you look at the DOM elems in dev tools, you notice the DOM includes the h1 elem, and the dom of the page is different from the source code - the original HTML file you created.
+
+this is because the HTML represents the initial page content, whereas the DOM represents the updated page content, which was changed by the JS code written. 
+
+updating the DOM with JS is powerful but verbose. with this approach, devs spend a lot of time writing instructions to tell the computer how it should do things. it would be pretty nice to describe what you want to show and let the computer figure out how to update the DOM.
+
+
+
+
+
+
 
 
 
