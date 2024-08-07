@@ -395,4 +395,16 @@ ex: first move the state up from MyButton into MyApp:
         }
 
 
+        note: the info you pass down like this is called props. now the MyApp component contains the count state and the handleClick event handler, and passes both of them down as props to each of the buttons. finally change MYButton to read the props you passed from its parent component:
+
+        ex:
+
+            function MyButton({ count, onClick }) {
+                return (
+                    <button onClick={onClick}>
+                        Clicked {count} times
+                    </button>
+                )
+            }
+
 */
