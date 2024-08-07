@@ -74,6 +74,11 @@ you can use DOM methods and JS, to listen to user events and manipulate the DOM 
 
 
 
+** updating UI with JS
+
+start with creating an html file
+
+
 
 
 
