@@ -54,6 +54,26 @@ you can use React and Next.js to build fully interactive, highly dynamic, and pe
 
 
 
+** rendering UI
+
+to understand React, we need understanding of how browsers interpret code to create or render UI
+
+when a user visits a web page, the server returns an HTML file to the browser
+
+the browser then reads the HTML and constructs the Document Object Model (DOM)
+
+
+**what is the DOM?
+
+
+DOM is an object representation of the HTML elements. it acts as a bridge between code and the UI, and has a tree like structure with parent and child relationships
+
+
+you can use DOM methods and JS, to listen to user events and manipulate the DOM by selecting, adding updating and deleting specific elements in the UI. DOM manip. allowws targeting of elements and changing the style and content
+
+
+
+
 
 
 
