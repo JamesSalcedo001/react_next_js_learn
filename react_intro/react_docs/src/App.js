@@ -322,4 +322,18 @@ ex:
                     </button>
                 )
             }
+
+
+
+
+
+** using hooks
+
+note: functions starting with use are called Hooks. useState is a built in Hook provided by React. You can write your own hooks by combining the existing ones as well.
+
+note: hooks are more restrictive than other functions. you can only call hooks at the top of your components or other hooks. if you want to use useState in a condition or a loop, extract a new component and put it there.
+
+
+
+
 */
