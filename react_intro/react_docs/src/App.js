@@ -335,5 +335,64 @@ note: hooks are more restrictive than other functions. you can only call hooks a
 
 
 
+** sharing data between components
+
+note: in previous example each MyButton had its own independent count and when each button was clicked, only the count for the button clicked changed. 
+
+note: however you'll often need components to share data and always update together.
+
+note: to make both mybutton components display the same count and update together, you need to move the state from the individual buttons upwards to the closest component containing them, the parent component.
+
+ex: for MyApp
+
+    note: initially MyApp's count state is 0 and is passed down to both children
+    
+    note: on click, MyApp updates its count state to 1 and passes it down to both children
+
+
+note: now when either button is clicked, the count in MyApp will change both Mybutton counts simultaneously
+
+ex: first move the state up from MyButton into MyApp:
+
+    export default function MyApp() {
+        const [count, setCount] = useState(0);
+
+        function handleClick() {
+            setCount(count + 1);
+        }
+
+        return (
+            <div>
+                <h1>Counters that update separately</h1>
+                <MyButton />
+                <MyButton />
+            </div>
+        );
+    }
+
+    function MyButton() {
+        // moving code from here ...
+    }
+
+    ex2: then pass the state down from MyApp to each MyButton, together with the shared click handler. you can pass info to MyButton using the JSX curly braces, just like previously done with built in tags like <img />:
+
+
+        export default function MyApp() {
+            const [count, setCount] = useState(0);
+
+            function handleClick() {
+                setCount(count + 1);
+            }
+
+
+            return (
+                <div>
+                    <h1>Counters that update together</h1>
+                    <MyButton count={count} onClick={handleClick}/>
+                    <MyButton count={count} onClick={handleClick}/>
+                </div>
+            )
+        }
+
 
 */
