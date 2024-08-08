@@ -144,7 +144,13 @@ creating components
 
 in react components are functions inside script tag, create new funcion called header:
 
-a component is a funcion that returns UI elems. inside the return statement of the function, you can write JSX
+a component is a function that returns UI elems. inside the return statement of the function, you can write JSX
+
+
+
+Components trees
+
+you can keep nesting components to form component trees
 
 
 

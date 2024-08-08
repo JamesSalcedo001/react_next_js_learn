@@ -10,13 +10,18 @@
             <script type="text/jsx">
             const app = document.getElementById('app');
 
-            function header() {
+            function Header() {
                 return (<h1>Develop. Preview. Ship</h1>)
             }
 
+            function HomePage() {
+                return <div>
+                        <Header />
+                       </div>
+            }
+
             const root = ReactDOM.createRoot(app);
-            root.render(header);
-            <!-- root.render(<h1>Develop. Preview. Ship</h1>); -->
+            root.render(<Header />);
         </script>
     </body>
 </html>
@@ -73,6 +78,20 @@ JSX is a syntax extension for JS that allows you to describe the UI in a familia
 but browsers dont understand JSX out the box so one needs a JS compiler such as Babel, to transform JSX code into regular JS.
 
 add babel to project
+
+
+
+
+
+
+
+** Nesting components
+
+you can nest React components inside eachother like you would regular HTML elems. 
+
+ex: above we create a new component HomePage ^^
+
+and then nest the Header comp inside the new Homepage component ^^
 
 
 -->
