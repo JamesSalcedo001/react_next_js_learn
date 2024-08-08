@@ -163,6 +163,15 @@ this modular format allows you to reuse components in different places inside yo
 now since HomePage is now a top level component and you can pass it to the root.render() method
 
 
+** displaying data with props
+
+html elems have attributes that you can use to pass pieces of info that change the behavior of elements. ex: changing the src attribute of an <img> elem changes the image that is shown. changing the href attribute of an <a> tag changed the destination of the link. in the same way you can pass pieces of info as properties to React components called props. 
+
+similar to JS functions, you can design components that accespt custom arguments(props) that change the components behavior or what is visibly shown when its rendered to the screen. then you can pass down these props from parent components to child components.
+
+in React data flows down the component tree. this is referred to as one way data flow. state can be passed down from parent to child components as props.
+
+
 
 
 */
