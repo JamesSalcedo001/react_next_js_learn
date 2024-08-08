@@ -152,6 +152,15 @@ Components trees
 
 you can keep nesting components to form component trees
 
+ex: top level Homepage component could hold a Header, an Article, and Footer component
+
+each of those components could also have their own child components and so on. 
+
+the headr component could contain a Logo, Title, and Navigation component 
+
+this modular format allows you to reuse components in different places inside your app
+
+now since HomePage is now a top level component and you can pass it to the root.render() method
 
 
 
