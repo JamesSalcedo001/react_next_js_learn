@@ -254,4 +254,25 @@ you can define a function to handle events whenever they are triggered.
 
 then call the handlClick function when onCLick is triggered
 
+
+** state and hooks
+
+hooks allow you to add additional logic such as state to your components. you can think of state as any info in ur UI that changes over time, usually triggered by user interaction
+
+you can use state to store and increment the num of times a user has clicked the like button. a react hook used to manage state is called useState()
+
+useState returns an array, and you can access and use those array values inside your component using array destructuring. 
+
+the first item in the array is the state value, which you can name anything. 
+
+the second item in the array is a function to update the value. you can name the update func anything, but its comon to prefix it with set followed by the name of the state variable being updated in camelcase
+
+also set the initial value of likes state inside the parentheses
+
+unlike props which are passed down to components as the first function param, the state is initiated and stored within a component. you can pass the state info to children components as props, but the logic for updating the state should be kept within the component where state was initially created. 
+
+what is the difference between props and state? 
+
+Props are read only info thats passed to components. state is info that can change over time, usually triggered by user interaction.
+
 */
