@@ -182,4 +182,49 @@ since props is an object, you can use object destructuring to explicitly name th
 if you open your browser you can see that <h1>title</h1> will just show up as the word title, not the prop passed down. this is because react thinks you intend to render the plain text string to the dom. you need a way to tell react this is a JS variable
 
 
+
+
+** using variables in JSX
+
+
+to use the title prop, add curly braces {} these are special JSX syntax that allows you to write regular JS inside JSX markup
+
+using curly braces enables usage of javascript expressions(something that evaluates to a single value)
+
+ex: object property with dot notation
+
+    function Header(props) {
+        return <h1>{props.title}</h1>;
+    }
+
+
+    a template literal
+
+    function Header({ title }) {
+        return <h1>{`Cool ${title}`}</h1>;
+    }
+
+
+    the returned value of a function
+
+    function createTitle(title) {
+        if (title) {
+            return title;
+        } else {
+            return "Default Title"; 
+        }
+    }
+
+
+    function HEader({ title }) {
+        return <h1>{createTitle(title)}</h1>;
+    }
+
+
+    or ternary operators
+
+    function Header({ title }) {
+        return <h1>{title ? title : "Default Title"}</h1>;
+    }
+
 */
