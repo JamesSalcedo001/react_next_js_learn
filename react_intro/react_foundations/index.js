@@ -227,4 +227,17 @@ ex: object property with dot notation
         return <h1>{title ? title : "Default Title"}</h1>;
     }
 
+
+
+** iterating through lists
+
+common to have data you need to show as a list. you can use array methods to manipulate tour data and generate UI elems that are identical in style but hold different pieces of info.
+
+
+you can use the array.map() method to iterate over the array and use an arrow function to map a name to a list item
+
+react needs somethng to uniquely identify items in an array so it knows which elemens to update in the dom
+
+it is recommended to use ID so it is unique
+
 */
