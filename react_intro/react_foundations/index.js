@@ -240,4 +240,14 @@ react needs somethng to uniquely identify items in an array so it knows which el
 
 it is recommended to use ID so it is unique
 
+
+
+** adding interactivity with state
+
+
+React adds interactivity with state and event handlers
+
+
+in react event names are camelCased. the onClick event is one of many possible events you can use to respond to user interaction. ex: you can use onChange for input fields or onSubmit for forms.
+
 */
