@@ -172,6 +172,14 @@ similar to JS functions, you can design components that accespt custom arguments
 in React data flows down the component tree. this is referred to as one way data flow. state can be passed down from parent to child components as props.
 
 
+** using props
+
+in homepage component, you can pass custom title prop to the HEader component, just like you pass HTML attributes
+
+since props is an object, you can use object destructuring to explicitly name the values of props inside your function params
+
+
+if you open your browser you can see that <h1>title</h1> will just show up as the word title, not the prop passed down. this is because react thinks you intend to render the plain text string to the dom. you need a way to tell react this is a JS variable
 
 
 */

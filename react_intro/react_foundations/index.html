@@ -10,13 +10,14 @@
             <script type="text/jsx">
             const app = document.getElementById('app');
 
-            function Header() {
-                return (<h1>Develop. Preview. Ship</h1>)
+            function Header({ title }) {
+                console.log(title)
+                return (<h1>title</h1>)
             }
 
             function HomePage() {
                 return <div>
-                            <Header />
+                            <Header title="React" />
                        </div>
             }
 
@@ -93,6 +94,8 @@ ex: above we create a new component HomePage ^^
 
 and then nest the Header comp inside the new Homepage component ^^
 
+
+console.logging props shows that it is an object with a title property
 
 -->
 
