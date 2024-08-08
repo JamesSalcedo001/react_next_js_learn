@@ -250,4 +250,8 @@ React adds interactivity with state and event handlers
 
 in react event names are camelCased. the onClick event is one of many possible events you can use to respond to user interaction. ex: you can use onChange for input fields or onSubmit for forms.
 
+you can define a function to handle events whenever they are triggered.
+
+then call the handlClick function when onCLick is triggered
+
 */
