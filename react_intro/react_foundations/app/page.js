@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from 'react';
+import LikeButton from "./like-button";
  
 function Header({ title }) {
   return <h1>{title ? title : 'Default title'}</h1>;
@@ -9,11 +7,9 @@ function Header({ title }) {
 export default function HomePage() {
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
  
-  const [likes, setLikes] = useState(0);
  
-  function handleClick() {
-    setLikes(likes + 1);
-  }
+ 
+  
  
   return (
     <div>
@@ -23,8 +19,7 @@ export default function HomePage() {
           <li key={name}>{name}</li>
         ))}
       </ul>
- 
-      <button onClick={handleClick}>Like ({likes})</button>
+      <LikeButton />
     </div>
   );
 }
@@ -387,5 +382,18 @@ after server components are rendered, a special data format called the React Ser
 - placeholders (or holes) for where Client Components should be rendered and references to their JS files.
 
 React uses this info to consolidate the Server and Client Components and update the DOM on the client
+
+
+
+** using client components
+
+Next.js uses server components by default- this is to improve app performance and means you dont have to take additional steps to adopt them
+
+the error is warning you that you are trying to use useState in a Server component. you fix this by moving the inteeractive like button to a client component
+
+
+after making changes and saving (I have it on autosave) the browser automatically refreshes to reflect the changes to the dom. this is called Fast Refresh in Next.js. it gives instantaneous feedback on any edits you make and comes preconfigured with Next.js
+
+
 
 */
