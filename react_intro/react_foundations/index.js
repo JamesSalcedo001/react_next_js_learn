@@ -275,4 +275,7 @@ what is the difference between props and state?
 
 Props are read only info thats passed to components. state is info that can change over time, usually triggered by user interaction.
 
+
+While React excels at building UI, it does take some work to independently build that UI into a fully functioning scalable application. There are also newer React features, like Server and Client Components, that require a framework. The good news is that Next.js handles much of the setup and configuration and has additional features to help you build React applications.
+
 */

@@ -1,80 +1,51 @@
 <html>
-    <body>
-        <div id="app"></div>
-        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-        <!-- babel script -->
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-        <!-- change script type to jsx to inform babel what code to transform -->
-        <!-- <script type="text/javascript"> -->
-            <script type="text/jsx">
-            const app = document.getElementById('app');
-
-            function Header({ title }) {
-                return (<h1>{title ? title : "Default title"}</h1>);
-            }
-
-            function HomePage() {
-                const [likes, setLikes] = React.useState(0);
-
-                const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
-
-                function handleClick() {
-                    // add in state updater function
-                    setLikes(likes + 1);
-                }
-
-                return (
-                    <div>
-                        <Header title="Develop. Preview. Ship." />
-                        <ul>
-                            {names.map((name) => (
-                                <li key={name}>{name}</li>
-                            ))}
-                        </ul>
-                        <button onClick={handleClick}>Like({likes})</button>
-                   </div>
-                )
-            }
-
-            const root = ReactDOM.createRoot(app);
-            root.render(<HomePage />);
-        </script>
-    </body>
+  <body>
+    <div id="app"></div>
+ 
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+ 
+    <script type="text/jsx">
+      const app = document.getElementById("app")
+ 
+      function Header({ title }) {
+        return <h1>{title ? title : "Default title"}</h1>
+      }
+ 
+      function HomePage() {
+        const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"]
+ 
+        const [likes, setLikes] = React.useState(0)
+ 
+        function handleClick() {
+          setLikes(likes + 1)
+        }
+ 
+        return (
+          <div>
+            <Header title="Develop. Preview. Ship." />
+            <ul>
+              {names.map((name) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
+ 
+            <button onClick={handleClick}>Like ({likes})</button>
+          </div>
+        )
+      }
+ 
+      const root = ReactDOM.createRoot(app);
+      root.render(<HomePage />);
+    </script>
+  </body>
 </html>
 
 
-<!-- 
-<html>
-    <body>
-        <div id="app"></div>
-        <script type="text/javascript">
-            // select div elem with 'app' id
-            const app = document.getElementById('app');
-
-            // create a new h1 elem
-            const header = document.createElement('h1');
-
-            // create a new text node for the h1 element
-            const text = 'Develop. Preview. Ship';
-            const headerContent = document.createTextNode(text);
-
-            // append text to h1 element
-            header.appendChild(headerContent);
-
-            // place h1 elem inside the div
-            app.appendChild(header);
-        </script>
-    </body>
-</html>
-
-JS way 
 
 
--->
-
-
-<!-- use DOM method getElementByID to select the div elem by its id 
+use DOM method getElementByID to select the div elem by its id 
  
 
 use DOM methods to create a new h1 elem
@@ -112,6 +83,3 @@ and then nest the Header comp inside the new Homepage component ^^
 
 
 console.logging props shows that it is an object with a title property
-
--->
-
