@@ -344,4 +344,25 @@ next.js uses react server components a new feature that allows react to render o
 
 a new file called layout.js was created inside the app folder automatically, this is the new layout of your application you can use it to add UI elems that are shared across all pages eg. navigation/footer etc
 
+
+
+** server and client components
+
+to understand how these work, being familiar with these is helpful:
+
+- the environments your code can be executed in: the server and client
+
+- the network boundary that separates server and client code
+
+
+in the context of web apps
+
+- the client refers to the browser on a user's device that sends a request to a server for your app's code. it then turns the response it receives from the server to an interface the user can interact with
+
+- the server refers to the computer in a data center that stores your app code receives requests from a client does some computation, and sends back an appropriate response.
+
+each env has its own set of capabilities and constraints. ex: by moving rendering and data fetching to the server, you reduce the amount of code sent to the client, which improves app performance. but to make the UI interactive, you need to update the DOM on the client
+
+the code you write for the server and client is not always the same, certain ops (data fetching or managing user state) are better suited for one env over the other
+
 */
