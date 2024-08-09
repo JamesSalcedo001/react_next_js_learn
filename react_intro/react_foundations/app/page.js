@@ -365,4 +365,27 @@ each env has its own set of capabilities and constraints. ex: by moving renderin
 
 the code you write for the server and client is not always the same, certain ops (data fetching or managing user state) are better suited for one env over the other
 
+
+
+
+** network boundary
+
+the network boundary is a conceptual line that separates the diff environments
+
+in React you choose where to place the network boundary in your component tree. ex: you can fetch data and render a user's posts on the server (using SErver components) then render the interactive LikeButton for each post on the client(using Client components)
+
+similarly you can create a Nav component that is rendered on the server and shared across pages, but if you want to show an active state for links you can render the list of Links on the client
+
+
+behind the scenes the components are split into two module graphs. the server module graph(tree) contains all the Server components that are rendered on the server and the client module graph(tree) contains all Client components.
+
+after server components are rendered, a special data format called the React Server Component Payload (RSC) is sent to the client. the RSC payload contains:
+
+
+- the rendered result of Server Components
+
+- placeholders (or holes) for where Client Components should be rendered and references to their JS files.
+
+React uses this info to consolidate the Server and Client Components and update the DOM on the client
+
 */
