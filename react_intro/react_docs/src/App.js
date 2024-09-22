@@ -1,23 +1,28 @@
+function Square({ value }) {
+    return <button className="square">{value}</button>;
+}
+
+
 export default function Board() {
     return (
         <>
-        <div className="board-row">
-            <button className="square">1</button>
-            <button className="square">2</button>
-            <button className="square">3</button>
-        </div>
+            <div className="board-row">
+                <Square />
+                <Square />
+                <Square />
+            </div>
 
-        <div className="board-row">
-            <button className="square">4</button>
-            <button className="square">5</button>
-            <button className="square">6</button>
-        </div>
+            <div className="board-row">
+                <Square />
+                <Square />
+                <Square />
+            </div>
 
-        <div className="board-row">
-            <button className="square">7</button>
-            <button className="square">8</button>
-            <button className="square">9</button>
-        </div>
+            <div className="board-row">
+                <Square />
+                <Square />
+                <Square />
+            </div>
         
         </>
     );
@@ -478,6 +483,17 @@ lines 1-5 bring all the necessary pieces together:
 note: the remainder of the file brings all the pieces together and injects the final product into index.html in the public folder
 
 note: React components need to retur a single JSX element and not multiple adjacent JSX elements like two buttons. to fix this you can use Fragments to wrap multiple adjacent JSX elements
+
+
+** passing data through props
+
+we want to chage the value of squares from empty to X when the user clicks on the square. currently, the way this board is built requires you to use the same kind of code to update the square 9 times. instead of copy-pasting, react's component architecture allows you to create a reusable component to avoid messy duplicated code. 
+
+note: using the new code where one reuses the Square components, one can use props to pass the value each square should have from the parent component (Board) to its child (Square)
+
+note: function Square({ value }) indicates the square comp can be passed a prop called value
+
+
 
 
 
