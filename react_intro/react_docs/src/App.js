@@ -437,7 +437,12 @@ ex: first move the state up from MyButton into MyApp:
 
 note: a component is a piece of reusable code that represents a part of a user interface. components are used to render, manage, and update the UI elements in your application. 
 
-// the code at the top of this page defines a function called Square. the export JS keyword makes this function accessible outside this file. the default keyword tells other files using your code that its the main function in your file.
+note: the code at the top of this page defines a function called Square. the export JS keyword makes this function accessible outside this file. the default keyword tells other files using your code that its the main function in your file.
+
+
+
+note: the second line returns a button. the return JS keyword means whatever comes after is returned as a value to the caller of the function. <button> is a JSX element. a JSX element is a combination of JS code and HTML tags that describes what you'd like to display. className="square" is a button property or 'prop' that tells CSS how to style the button. X is the text displayed inside the button and </button> closes the JSX element to indicate any following content shouldn't be placed inside the button. 
+
 
 
 */
