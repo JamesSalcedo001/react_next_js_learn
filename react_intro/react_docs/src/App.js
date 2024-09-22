@@ -444,5 +444,18 @@ note: the code at the top of this page defines a function called Square. the exp
 note: the second line returns a button. the return JS keyword means whatever comes after is returned as a value to the caller of the function. <button> is a JSX element. a JSX element is a combination of JS code and HTML tags that describes what you'd like to display. className="square" is a button property or 'prop' that tells CSS how to style the button. X is the text displayed inside the button and </button> closes the JSX element to indicate any following content shouldn't be placed inside the button. 
 
 
+the index.js file here is the bridge between the component created in App.js and the web browser. 
+
+
+lines 1-5 bring all the necessary pieces together: 
+
+- React
+- React's library to talk to web browsers(ReactDOM)
+- the styles for components
+- the component created in App.js
+
+note: the remainder of the file brings all the pieces together and injects the final product into index.html in the public folder
+
+
 
 */
