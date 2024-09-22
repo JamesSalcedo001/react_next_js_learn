@@ -504,6 +504,10 @@ note: using the new code where one reuses the Square components, one can use pro
 
 note: function Square({ value }) indicates the square comp can be passed a prop called value
 
+note: to 'remember' things, components use state. React provides a special function called useState that you can call from your component to let it 'remember' things. we will store the current value of the square in state, and change it when the square is clicked
+
+import usestate at the top of the file. remove the value prop from the square component. instead, add a new line at the start of the square that calls usestate. have it return a state variable called value.
+
 
 
 
