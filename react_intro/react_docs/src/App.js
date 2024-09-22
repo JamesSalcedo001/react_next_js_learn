@@ -431,4 +431,13 @@ ex: first move the state up from MyButton into MyApp:
                 );
             }
 
+
+
+** tic tac toe section notes
+
+note: a component is a piece of reusable code that represents a part of a user interface. components are used to render, manage, and update the UI elements in your application. 
+
+// the code at the top of this page defines a function called Square. the export JS keyword makes this function accessible outside this file. the default keyword tells other files using your code that its the main function in your file.
+
+
 */
