@@ -1,4 +1,8 @@
-function Square({ value }) {
+import { useState } from "react";
+
+function Square() {
+    const [value, setValue] = useState(null);
+
     function handleClick() {
         console.log("clicked");
     }
@@ -509,6 +513,14 @@ note: to 'remember' things, components use state. React provides a special funct
 import usestate at the top of the file. remove the value prop from the square component. instead, add a new line at the start of the square that calls usestate. have it return a state variable called value.
 
 
+
+
+
+note: below, value stores the value and setalue is a function that can be used to change the value. the null passed to usestate is used as the initial value for this state variable, so value here starts off equal to null
+
+
+
+const [value, setValue] = useState(null);
 
 
 
